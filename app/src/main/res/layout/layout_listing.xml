@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="@drawable/highlight_selector">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/listing_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp"
+                android:scaleType="centerCrop"/>
+
+            <com.google.android.gms.plus.PlusOneButton
+                android:id="@+id/listing_plus_one_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignTop="@+id/listing_sharing_btn"
+                android:layout_toLeftOf="@+id/listing_sharing_btn"
+                android:layout_toStartOf="@+id/listing_sharing_btn"/>
+
+            <ImageButton
+                android:id="@+id/listing_sharing_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_social_share"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/listing_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Title Listing"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/listing_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/listing_title"
+                android:text="Sample Shop Name"
+                android:textColor="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/listing_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/listing_title"
+                android:text="$19.99"
+                android:textColor="@android:color/holo_green_dark"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>
